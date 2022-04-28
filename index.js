@@ -3,21 +3,18 @@
 let count = 0
 let countEl = document.getElementById("count-el")
 
+let saveEl = document.getElementById("save-el")
 
 function increment() {
-  count = count + 1
-  countEl.innerText = count
+  count += 1
+  countEl.textContent = count
   console.log(count)
 }
 
 function save() {
-  console.log(count)
+  let countStr = count + " - "
+  saveEl.textContent += countStr
+  count = 0
+  countEl.textContent = 0
 }
 
-let username = "tina"
-
-let message = "You have three new notifications"
-
-let messageToUser = message + ", " + username + "!"
-
-console.log(messageToUser)
